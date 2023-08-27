@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Roboto&display=swap");
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #414141;
+  height: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 20px;
+  color: #93231A;
+}
+
+.cont-input {
+  display: block;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.cont-input label {
+  margin-top: -4px;
+  position: absolute;
+  margin-left: 10px;
+  background: #fff;
+  padding: 0 6px;
+  font-size: 13px;
+}
+.cont-input input, .cont-input select {
+  width: calc(100% - 32px);
+  padding: 15px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.cont-input select {
+  width: 100%;
+  padding: 14px;
+}
+
+button, .button {
+  display: block;
+  padding: 10px;
+  background-color: #93231A;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover, .button:hover {
+  background-color: #F5B142;
+  color: #414141;
+}
+
+.cont_four_column {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1141px;
+  margin: 0 auto;
+}
+.cont_four_column .item {
+  width: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+.cont_four_column .item h2 {
+  font-size: 16px;
+  margin-TOP: 20px;
+}
+.cont_four_column .item .button {
+  margin-top: 10px;
+}
+@media screen and (max-width: 768px) {
+  .cont_four_column .item {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .cont_four_column .item {
+    width: 100%;
+  }
+}
+
+.cont_three_column {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1141px;
+  margin: 0 auto;
+}
+.cont_three_column .item {
+  width: 33.33%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .cont_three_column .item {
+    width: 100%;
+  }
+}
+
+.paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+.paginacao button, .paginacao .num-pagina {
+  border: none;
+  background-color: #f0f0f0;
+  color: #333;
+  font-size: 16px;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+.paginacao button:hover, .paginacao .num-pagina:hover {
+  background-color: #ddd;
+}
+.paginacao .num-pagina {
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: bold;
+  border: 1px solid #C4CDD5;
+  padding: 5px 12px;
+  border-radius: 5px;
+  background: transparent;
+}
+.paginacao .num-pagina.actual {
+  border: 1px solid #F5B142;
+  color: #F5B142;
+}
+
+#bt-exportar-editais {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  float: right;
+  background: #F5B142;
+  color: #414141;
+}
+#bt-exportar-editais:hover {
+  background: #414141;
+  color: #F5B142;
+}
+@media screen and (max-width: 768px) {
+  #bt-exportar-editais {
+    float: none;
+    margin: 20px auto;
+  }
+}
+
+.container {
+  width: 95%;
+  max-width: 1141px;
+  padding: 0 2.5%;
+  margin: 0 auto;
+}
+.container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.container table thead {
+  background-color: #E9E9E9;
+}
+.container table thead th {
+  padding: 15px 10px;
+  font-weight: 400;
+}
+.container table tr.linha td {
+  padding: 15px;
+  text-align: center;
+}
+.container table tbody tr.linha:nth-child(even) {
+  background-color: #f3f3f3;
+}
+.container table tbody tr.linha:nth-child(odd) {
+  background-color: #fff;
+}
+.container table tbody tr.linha:hover {
+  background-color: #F5B142;
+  color: #414141;
+}
+
+header {
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  align-items: center;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  background: #93231A;
+}
+header nav ul li {
+  margin: 0 10px;
+  list-style: none;
+  padding: 7px 5px;
+}
+header nav ul li:hover {
+  color: #93231A;
+  background: url(imgs/seta-menu.png) no-repeat 50% 110%;
+}
+header nav ul li.active {
+  color: #93231A;
+  background: url(imgs/seta-menu.png) no-repeat 50% 110%;
+}
+header nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.subtitle {
+  margin: 40px auto;
+  text-align: center;
+}
+
+/*# sourceMappingURL=styles.css.map */

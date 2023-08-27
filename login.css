@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Roboto&display=swap");
+body {
+  background: linear-gradient(to top, #93231A, #fff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 330px;
+  padding: 30px 60px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+.login-container .title-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 40px auto;
+}
+.login-container .mensagem-login * {
+  margin: 0 auto;
+  display: table;
+  margin-bottom: 10px;
+}
+.login-container .mensagem-login span {
+  color: #414141;
+}
+.login-container .mensagem-login .mensagem-login > *:last-child {
+  margin-bottom: 20px;
+}
+.login-container .forgot-password {
+  display: block;
+  text-align: right;
+  margin-top: 10px;
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.login-container .forgot-password:hover {
+  color: #0056b3;
+}
+.login-container button {
+  margin: 5px 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.cont-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=login.css.map */
