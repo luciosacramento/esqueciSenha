@@ -1,0 +1,244 @@
+  @import 'variablesFunctions';
+  // Mixin
+  @mixin basic-column() {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: $max-width-conteudo;
+    margin: 0 auto;
+  }
+
+  html {
+    height: 100%;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: $color-middle-grey;
+    height: 100%;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
+  h1{
+    font-size: 20px;
+    color: $color-red;
+  }
+
+  .cont-input{
+    display: block;
+    flex-direction: column;
+    margin-bottom: 20px;
+    label {
+        margin-top: -4px;
+        position: absolute;
+        margin-left: 10px;
+        background: #fff;
+        padding: 0 6px;
+        font-size: 13px;;
+    }
+    input,select {
+      width: calc(100% - 32px);
+      padding: 15px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    select {
+      width: 100%;
+      padding: 14px;
+    }
+  }   
+  
+  
+  button,.button {
+    display: block;
+    padding: 10px;
+    background-color: #93231A;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover,.button:hover {
+    background-color: $color-amarelo;
+    color: $color-middle-grey;
+  }
+
+  .cont_four_column {
+    @include basic-column();
+  
+    .item {
+      width: 25%;
+      padding: 10px;
+      box-sizing: border-box;
+
+      h2{
+        font-size: 16px;
+        margin-TOP: 20px;
+      }
+      .button{
+        margin-top: 10px;
+      }
+  
+      @media screen and (max-width: 768px) {
+        width: 50%; // 2 colunas em telas menores
+      }
+  
+      @media screen and (max-width: 480px) {
+        width: 100%; // 1 coluna em telas ainda menores
+      }
+    }
+  }
+
+  .cont_three_column {
+    @include basic-column();
+  
+    .item {
+      width: 33.33%;
+      padding: 10px;
+      box-sizing: border-box;
+    
+      @media screen and (max-width: 768px) {
+        width: 100%; // 1 coluna em telas ainda menores
+      }
+    }
+  }
+
+  .paginacao {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+  
+    button,.num-pagina {
+      border: none;
+      background-color: #f0f0f0;
+      color: #333;
+      font-size: 16px;
+      padding: 8px 12px;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #ddd;
+      }
+    }
+  
+    .num-pagina {
+      margin: 0 5px;
+      font-size: 18px;
+      font-weight: bold;
+      border: 1px solid $color-light-grey;
+      padding: 5px 12px;
+      border-radius: 5px;
+      background: transparent;
+    }
+
+    .num-pagina.actual{
+      border: 1px solid $color-amarelo;
+      color: $color-amarelo;
+    }
+  }
+
+  #bt-exportar-editais{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    float: right;
+    background: $color-amarelo;
+    color: $color-middle-grey;
+    &:hover{
+      background: $color-middle-grey;
+      color: $color-amarelo;
+    }
+    @media screen and (max-width: 768px) {
+      float: none;
+      margin: 20px auto;
+    }
+  }
+
+.container {
+    width: 95%;
+    max-width: $max-width-conteudo;
+    padding: 0 2.5%;
+    margin: 0 auto;
+
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        thead{
+            background-color: $color-blue-grey;
+            th{
+                padding: 15px 10px;
+                font-weight: 400;
+            }
+        }
+        tr.linha td{
+            padding: 15px;
+            text-align: center;
+        }
+        tbody{
+            tr.linha{
+                 &:nth-child(even) {
+                 background-color: $color-ultra-light-grey;
+                 }
+     
+                 &:nth-child(odd) {
+                 background-color: #fff;
+                 }
+                 &:hover{
+                        background-color: $color-amarelo;
+                        color: $color-middle-grey;
+                 }
+             }
+        } 
+    }
+}
+
+header{
+    margin:  40px auto;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    align-items: center;
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        background: $color-red;
+        li{
+            margin: 0 10px;
+            list-style: none;
+            padding: 7px 5px;
+            &:hover{
+                color: $color-red;
+                background: url(imgs/seta-menu.png) no-repeat 50% 110%;
+            }
+            &.active{
+                color: $color-red;
+                background: url(imgs/seta-menu.png) no-repeat 50% 110%;
+            }
+            a{
+                text-decoration: none;
+                color: #fff;
+                font-size: 1.2rem;
+               
+            }
+        }
+    }
+}
+
+.subtitle{
+  margin: 40px auto;
+  text-align: center;
+}
+  
+  
